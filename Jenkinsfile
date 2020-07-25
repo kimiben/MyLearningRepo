@@ -1,16 +1,10 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'DockerFile'
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+               echo 'My first pipeline.'
+            }
+        }
     }
-
-  }
-  stages {
-    stage('') {
-      steps {
-        build 'Test1'
-      }
-    }
-
-  }
 }
