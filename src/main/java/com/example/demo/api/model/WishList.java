@@ -1,15 +1,16 @@
 package com.example.demo.api.model;
 
+import org.hibernate.annotations.GeneratorType;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class WishList {
+
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
 
     public String getWish() {
